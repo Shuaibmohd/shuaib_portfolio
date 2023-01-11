@@ -1,0 +1,178 @@
+@import '../../global.scss';
+
+
+
+
+.work{
+    background-color: rgb(234, 139, 234);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+
+    .arrow{
+        position: absolute;
+        height: 50px;
+        cursor: pointer;
+        
+        @include mobile {
+            height: 25px;
+        }
+
+        &.left{
+            
+            left: 100px;
+            transform: rotateY(-180deg);
+
+            @include mobile{
+                top: 47%;
+                transform: translateY(-47%);
+                background-color: lightgray;
+                left: 20px;
+                padding: 10px;
+                border-radius: 50%;
+                transform: rotateY(-180deg);
+            }
+        }
+        &.right{
+            right: 100px;
+            @include mobile{
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: lightgray;
+                right: 20px;
+                padding: 10px;
+                border-radius: 50%;
+            }
+        }
+        
+    }
+
+    .slider{
+        height: 350px;
+        display: flex;
+        position: absolute;
+        left: 0;
+        transition: all 1s ease-in-out;
+       
+
+        .container{
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+           
+
+          
+
+            .item {
+                background: #fff;
+                height: 100%;
+                width: 700px;
+                border-radius: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                @include mobile{
+                    flex-direction: column-reverse;
+                }
+
+
+
+            
+
+                .left{
+                    flex: 4;
+                    // background-color: yellow;
+                    height: 80%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    @include mobile {
+                        flex: 6;
+                    }
+
+                    .leftContainer{
+                        width: 90%;
+                        height: 70%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        // align-items: center;
+                        @include mobile {
+                            width: 60%;
+                            align-items: center;
+                        }
+
+                       
+
+                        .imgContainer{
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 50%;
+                            background-color:rgb(253, 71, 107);
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            img{
+                                width: 25px;
+                            }
+                        }
+                        h2{
+                            font-size: 20px;
+                            @include mobile {
+                                overflow: hidden;
+                            }
+                        }
+                        p{
+                            font-size: 13px;
+                            @include mobile {
+                                text-align: center;
+                                margin: 5px 0;
+                                overflow: hidden;
+                            }
+                        }
+                        span{
+                            font-size: 12px;
+                            font-weight: 600;
+                            text-decoration: underline;
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+                .right{
+                    flex: 8;  
+                    // background-color:yellowgreen;  
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    overflow: hidden;
+
+                    @include mobile {
+                        flex: 6;
+                        align-items: flex-end;
+                        
+                    }
+
+                    img{
+                        width: 400px;
+                        transform: rotate(-10deg);
+
+                        @include mobile {
+                            width: 300px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
