@@ -59,7 +59,7 @@ const Portfolio = () => {
 
   return (
     <div className='portfolio' id='portfolio'>
-      <h1>Portfolio</h1>
+      <h1 onClick={featurePortfolio.title}>Portfolio</h1>
       <ul>
         {list.map(item=>(
           <ProductList  title={item.title} active={selected === item.id} setSelected={setSelected} id={item.id} />
@@ -67,10 +67,10 @@ const Portfolio = () => {
       </ul>
       <div className="container">
         {data.map((portfolioData) => (
-        <div className="item">
+        <a href={portfolioData.link} className="item" target="_blank">
           <img src={portfolioData.img} alt={portfolioData.title} />
           <h3>{portfolioData.title}</h3>
-        </div>
+        </a>
         ))}
       </div>
     </div>
